@@ -7,6 +7,12 @@ let menuEls = siteMenu.getElementsByClassName('menu-item');
 
 siteMenu.insertBefore(menuEls[1], menuEls[3]);
 
+menuEls = document.createElement('li');
+menuEls.classList.add("menu-item");
+menuEls.textContent = 'Новый пункт';
+
+siteMenu.appendChild(menuEls);
+
 
 //  Заменить картинку заднего фона на другую из папки img
 document.body.style.background = 'url(img/apple_true.jpg) center center no-repeat';
