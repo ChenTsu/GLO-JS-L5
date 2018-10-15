@@ -28,11 +28,13 @@ title.textContent = 'Мы продаем только подлинную тех�
 let advs = document.body.getElementsByClassName('adv');
 // console.log(advs);
 
-for (let i=0; i<advs.length; i++){
-  // document.removeChild(advs[i]);
-  advs[i].remove();
-}
-
+//не будем всю рекламу удалаять
+// for (let i=0; i<advs.length; i++){
+//   // document.removeChild(advs[i]);
+//   advs[i].remove();
+// }
+// поэтому убираем только единственный блок на странице
+advs[0].remove();
 
 // Спросить у пользователя отношение к технике apple и записать ответ в блок на странице с id "prompt"
 let loyalty = document.getElementById('prompt');

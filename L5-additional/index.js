@@ -1,7 +1,10 @@
 'use strict';
 
 // Выведите на страницу текущую дату и время в формате '09:59:59 30.05.2018'
-document.getElementById('currDate').textContent = new Date().toLocaleTimeString() + ' ' + new Date().toLocaleDateString();
+function printCurrDate(){
+  document.getElementById('currDate').textContent = new Date().toLocaleTimeString() + ' ' + new Date().toLocaleDateString();
+}
+printCurrDate();
 
 
 // Напишите функцию, которая будет добавлять 0 перед днями и месяцами,
@@ -22,8 +25,11 @@ document.getElementById('fixDate').addEventListener('click', ()=>{
 
 
 // Напишите функцию, которая выводит на страницу текущий день недели на русском языке (реализацию выбираете сами)
-let daysOfWeek = ['воскресенье', 'понедельник', 'вторник', 'среда', 'четверг', 'пятница', 'суббота'];
-document.getElementById('currDay').textContent = daysOfWeek[new Date().getDay()];
+function currDay() {
+  let daysOfWeek = ['воскресенье', 'понедельник', 'вторник', 'среда', 'четверг', 'пятница', 'суббота'];
+  document.getElementById('currDay').textContent = daysOfWeek[new Date().getDay()];
+}
+currDay();
 
 
 // Напишите функцию, которая выводит на страницу разницу между двумя датами в количестве дней
